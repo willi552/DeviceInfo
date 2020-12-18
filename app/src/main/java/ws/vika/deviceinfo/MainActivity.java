@@ -99,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
         return bitmap;
     }
 
+
+    // below method from https://gist.github.com/flawyte/efd23dd520fc2320f94ba003b9aabfce
     private static String getSerialNumber() {
         String serialNumber;
 
