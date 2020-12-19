@@ -6,58 +6,100 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/convertTextField"
-        android:layout_width="356dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:hint="Text to Convert"
-        android:inputType="text"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="14dp" />
-
-    <Button
-        android:id="@+id/convertButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Convert"
-        app:layout_constraintBottom_toTopOf="@+id/barcodeOutput"
-        app:layout_constraintStart_toStartOf="@+id/convertTextField"
-        app:layout_constraintTop_toBottomOf="@+id/convertTextField" />
-
     <ImageView
         android:id="@+id/barcodeOutput"
         android:layout_width="369dp"
         android:layout_height="141dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appOutput"
+        app:layout_constraintVertical_bias="0.671"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <Button
-        android:id="@+id/getSerialNumberButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Serial"
-        app:layout_constraintBottom_toTopOf="@+id/barcodeOutput"
+    <TextView
+        android:id="@+id/appOutput"
+        android:layout_width="358dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="88dp"
+        android:gravity="center_horizontal"
+        android:text="DeviceInfo"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/convertButton"
-        app:layout_constraintTop_toBottomOf="@+id/convertTextField" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/getImeiButton"
-        android:layout_width="wrap_content"
+        android:layout_width="191dp"
         android:layout_height="wrap_content"
         android:text="IMEI"
-        app:layout_constraintBottom_toTopOf="@+id/barcodeOutput"
+        app:layout_constraintBottom_toTopOf="@+id/methodThreeButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/getSerialNumberButton"
-        app:layout_constraintTop_toBottomOf="@+id/convertTextField"
-        app:layout_constraintVertical_bias="0.504" />
+        app:layout_constraintTop_toBottomOf="@+id/appOutput" />
+
+    <Button
+        android:id="@+id/getSerialNumberButton"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:text="Serial"
+        app:layout_constraintBottom_toTopOf="@+id/methodTwoButton"
+        app:layout_constraintEnd_toStartOf="@+id/getImeiButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appOutput" />
+
+    <Button
+        android:id="@+id/methodFourButton"
+        android:layout_width="75dp"
+        android:layout_height="49dp"
+        android:text="3"
+        app:layout_constraintEnd_toStartOf="@+id/methodThreeButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/methodTwoButton"
+        tools:layout_editor_absoluteY="311dp" />
+
+    <Button
+        android:id="@+id/methodTwoButton"
+        android:layout_width="76dp"
+        android:layout_height="49dp"
+        android:text="2"
+        app:layout_constraintEnd_toStartOf="@+id/methodFourButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/methodOneButton"
+        tools:layout_editor_absoluteY="311dp" />
+
+    <Button
+        android:id="@+id/methodFiveButton"
+        android:layout_width="76dp"
+        android:layout_height="49dp"
+        android:text="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/methodThreeButton"
+        tools:layout_editor_absoluteY="311dp" />
+
+    <Button
+        android:id="@+id/methodThreeButton"
+        android:layout_width="76dp"
+        android:layout_height="49dp"
+        android:text="4"
+        app:layout_constraintEnd_toStartOf="@+id/methodFiveButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/methodFourButton"
+        tools:layout_editor_absoluteY="311dp" />
+
+    <Button
+        android:id="@+id/methodOneButton"
+        android:layout_width="75dp"
+        android:layout_height="49dp"
+        android:text="1"
+        app:layout_constraintEnd_toStartOf="@+id/methodTwoButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="311dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
